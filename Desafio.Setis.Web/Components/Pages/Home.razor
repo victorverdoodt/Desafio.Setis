@@ -1,0 +1,81 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using System.Xml
+@using Desafio.Setis.Domain.Models.Entities
+@using Services;
+@using Interfaces;
+@using Desafio.Setis.Domain.Models;
+@inject IXmlImportService XmlImportService
+
+<InputFile OnChange="@LoadFile" accept=".xml,application/xml,text/xml" />
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}
+else if (users != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>USU_Id</th>
+                <th>USU_Name</th>
+                <th>USU_Login</th>
+                <th>USU_Senha</th>
+                <th>USU_Bloqueado</th>
+                <th>USU_DataAcesso</th>
+                <th>ENT_Id</th>
+                <th>ENT_Nome</th>
+                <th>ENT_Responsavel</th>
+                <th>ENT_TerminalPrefixo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.Login</td>
+                    <td>@user.Password</td>
+                    <td>@user.IsBlocked</td>
+                    <td>@user.LastAccessDate</td>
+                    <td>@user.EntityId</td>
+                    <td>@user.Entity.Name</td>
+                    <td>@user.Entity.Responsible</td>
+                    <td>@user.Entity.TerminalPrefix</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Selecione o arquivo .XML.</p>
+}
+
+@code {
+    private List<AdmUser> users;
+    private string errorMessage;
+
+    private async void LoadFile(InputFileChangeEventArgs e)
+    {
+        var xmlFile = e.File;
+        if (xmlFile != null)
+        {
+            try
+            {
+                var database = await XmlImportService.ImportXmlAsync(xmlFile.OpenReadStream());
+                users = database.AdmUsers;
+                errorMessage = null;
+                StateHasChanged();
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Erro: {ex.Message}";
+                StateHasChanged();
+            }
+        }
+    }
+}

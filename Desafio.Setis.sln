@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34707.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{5BFE8B13-23EE-453C-9E49-00F36BBA2683}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{5A89465F-F7A4-406A-88BC-D88AE848C98E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Setis.Domain", "Desafio.Setis.Domain\Desafio.Setis.Domain.csproj", "{B8FF92A6-FC6B-471D-A509-69F8B2FBBCF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Setis.Web", "Desafio.Setis.Web\Desafio.Setis.Web.csproj", "{6E78D9D0-216D-43EA-BCCF-453903CC83F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{8E0A42CD-AB37-4962-9ECF-B066F3C2603C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Setis.DataGen", "Desafio.Setis.DataGen\Desafio.Setis.DataGen.csproj", "{0E23F6DE-AAB4-49C7-810D-9C2A5BE2C8C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestSamples", "TestSamples", "{05169762-C652-4657-9661-D8C59563FA8F}"
+	ProjectSection(SolutionItems) = preProject
+		31-TestQuery.sql = 31-TestQuery.sql
+		InvalidTestDataDuplicated.xml = InvalidTestDataDuplicated.xml
+		InvalidXMLTest.xml = InvalidXMLTest.xml
+		InvalidTestDataLoginSize.xml = InvalidTestDataLoginSize.xml
+		SuccessTestData.xml = SuccessTestData.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{14187131-4DE9-4256-8E88-5A0D38B93494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Setis.Tests", "Desafio.Setis.Tests\Desafio.Setis.Tests.csproj", "{85A97C1B-2E57-469B-AA33-A02A365134D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8FF92A6-FC6B-471D-A509-69F8B2FBBCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FF92A6-FC6B-471D-A509-69F8B2FBBCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FF92A6-FC6B-471D-A509-69F8B2FBBCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FF92A6-FC6B-471D-A509-69F8B2FBBCF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E78D9D0-216D-43EA-BCCF-453903CC83F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E78D9D0-216D-43EA-BCCF-453903CC83F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E78D9D0-216D-43EA-BCCF-453903CC83F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E78D9D0-216D-43EA-BCCF-453903CC83F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E23F6DE-AAB4-49C7-810D-9C2A5BE2C8C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E23F6DE-AAB4-49C7-810D-9C2A5BE2C8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E23F6DE-AAB4-49C7-810D-9C2A5BE2C8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E23F6DE-AAB4-49C7-810D-9C2A5BE2C8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85A97C1B-2E57-469B-AA33-A02A365134D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A97C1B-2E57-469B-AA33-A02A365134D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A97C1B-2E57-469B-AA33-A02A365134D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A97C1B-2E57-469B-AA33-A02A365134D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8FF92A6-FC6B-471D-A509-69F8B2FBBCF5} = {5A89465F-F7A4-406A-88BC-D88AE848C98E}
+		{6E78D9D0-216D-43EA-BCCF-453903CC83F3} = {5BFE8B13-23EE-453C-9E49-00F36BBA2683}
+		{0E23F6DE-AAB4-49C7-810D-9C2A5BE2C8C4} = {8E0A42CD-AB37-4962-9ECF-B066F3C2603C}
+		{85A97C1B-2E57-469B-AA33-A02A365134D7} = {14187131-4DE9-4256-8E88-5A0D38B93494}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE9D5AD8-35B0-48A0-8448-54BDB363B901}
+	EndGlobalSection
+EndGlobal
